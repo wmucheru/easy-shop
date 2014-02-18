@@ -1,40 +1,45 @@
-	<!--Mid-->
-	<div id="midsection" class="container">
-	<h1>Shopping Cart</h1>
-	<div id="cart_holder">
-		<table id="cart_table" cellspacing="5" cellpadding="3">
-		<thead>
-		<tr id="table_header">
-			<td>Item</td>
-			<td>Quantity</td>
-			<td>Subtotals (KES.)</td>
-			<td>o</td>
-		</tr>
-		<thead>
-		<?php
+
+<div id="midsection">
+	<?php $this->load->view('utils/leftnav'); ?>
+
+	<div class="box-grid34" id="midbox">
+		<h1>Shopping Cart</h1>
+		<div id="cart_holder">
+			<table class="formtable" id="cart_table" cellspacing="5" cellpadding="3">
+			<thead>
+			<tr>
+				<th>Item</th>
+				<th>Quantity</th>
+				<th>Subtotals (KES.)</th>
+				<th>Action</th>
+			</tr>
+			<thead>
+			<?php 
+				if($cart = $this->cart->contents()){
+					foreach($cart as $item){
+			?>
+			<tr>
+				<td><?php echo $item['name'];  ?></td>
+				<td><?php echo $item['qty']; ?></td>
+				<td>KES. <?php echo $item['subtotal']; ?></td>
+				<td class='remove'>
+				<?php echo anchor('cart/remove/'.$item['rowid']."/cart", 'remove'); ?>
+				</td>
+			</tr>
+			<?php } //end foreach
+				}//end ifelse
+			?>
+			</table>
 			
-			if($cart = $this->cart->contents()){
-				
-				foreach($cart as $item){
-					echo "<tr>";
-					echo "<td>".$item['name']."</td>";
-					echo "<td>".$item['qty']."</td>";
-					echo "<td>KES. ".$item['subtotal']."</td>";
-					echo "<td class='remove'>";
-					echo anchor('cart/remove/'.$item['rowid'].
-						"/cart", 'X');
-					echo "</td></tr>";
-				}
-			}
-			
-			echo "</table>";
-		?>
-		<div class="totals_holder">
-			TOTAL(KES): <span class="totals">
-			<?php echo $this->cart->total(); ?></span><br/><br/>
-			<p><?php echo anchor('cart/checkout', 'Checkout Now', array('id'=>'checkout_but', 'class'=>'ui_button')); ?></p>
-			<p><?php echo anchor('/', 'Continue Shopping', array('id'=>'checkout_but', 'class'=>'ui_button_reset')); ?></p>
+			<div class="totals_holder">
+				TOTAL(KES): <span class="totals">
+				<?php echo $this->cart->total(); ?></span><br/><br/><br/>
+				<div><?php echo anchor('cart/checkout', 'Checkout Now &rarr;', 
+					array('id'=>'checkout_but', 'class'=>'uibutton btn-block')); ?> 
+					<?php echo anchor('products', '&larr; Continue Shopping', 
+					array('id'=>'checkout_but', 'class'=>'uibutton btn-block btn-info')); ?></div>
+			</div>
 		</div>
 	</div>
-	<div style="clear:both;"></div>
-	</div>
+<br class="cls"/>
+</div><!--End midsection-->

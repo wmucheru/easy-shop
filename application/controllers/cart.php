@@ -68,14 +68,7 @@ class Cart extends CI_Controller{
 		
 		//If the validation is successful and errrors are found
 		if($this->form_validation->run() == FALSE || $prod_amt == ''){
-			//Load the main content to template view
-			$data['page_content'] = 'products/view.php';
-			$data['pagetitle'] = $product->name." - Get the best of Kenya's Agriculture";
-			$data['body_id'] = "agriprod";
-			$data['product_id'] = $prod_id;
-			
-			/* Load view */
-			$this->load->view('utils/template', $data);
+			redirect('products/view/'.$prod_id);
 		}
 		else{
 			//Add to cart

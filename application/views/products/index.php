@@ -4,6 +4,8 @@
 	<div class="box-grid34" id="midbox">
 		<h1>Our Products</h1>
 		
+		<?php $this->load->view('utils/status'); ?>
+		
 		<div class="product_box">
 			<a class="prod" href="<?php echo site_url('products/view/1')?>">
 				<img src="<?php echo base_url();?>images/products/aloe-care-soap.png" alt="Aloe Care Soap"/>

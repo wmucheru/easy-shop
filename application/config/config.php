@@ -4,6 +4,11 @@ $config['base_url']	= 'http://localhost/muriuki/ci';
 $config['index_page'] = 'index.php';
 $config['uri_protocol']	= 'AUTO';
 
+//CUSTOM CONFIGS
+$config['email1'] = 'honestproductions@gmail.com';
+$config['email2'] = '';
+$config['phone1'] = '+254 722 382 078';
+
 $config['url_suffix'] = '';
 $config['language']	= 'english';
 $config['charset'] = 'UTF-8';
@@ -143,7 +148,7 @@ $config['global_xss_filtering'] = TRUE;
 | 'csrf_cookie_name' = The cookie name
 | 'csrf_expire' = The number in seconds the token should expire.
 */
-$config['csrf_protection'] = TRUE;
+$config['csrf_protection'] = FALSE;
 $config['csrf_token_name'] = 'osbst';
 $config['csrf_cookie_name'] = 'osbcw';
 $config['csrf_expire'] = 7200;

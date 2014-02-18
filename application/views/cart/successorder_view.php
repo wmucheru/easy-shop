@@ -1,6 +1,7 @@
+<div id="midsection">
+	<?php $this->load->view('utils/leftnav'); ?>
 
-	<!--Mid-->
-	<div id="midsection" class="container">
+	<div class="box-grid34" id="midbox">
 		<h1>Order successful!</h1>
 		<div id="success_holder" style='font-size:15px;line-height:1.6em;'>
 		
@@ -8,14 +9,15 @@
 		<ol>
 			<li>A confirmation email has been sent to your email address.</li>
 			<li>Your order will be processed as soon as you have made payment.</li>
-			<li>Send to M-Pesa: <strong><u>0711 116 656</u></strong> or call us on the same number.</li>
+			<li>Send to M-Pesa: <strong><u><?php echo $this->config->item('phone1'); ?></u></strong> 
+				or call us on the same number.</li>
 		</ol>
 		
-		
 		</div><br/><br/>
+		<p>
+			<?php echo anchor('products', 'Continue Shopping &rarr;', 
+				array('class'=>'uibutton')); ?></p>
 		
-		<p style="align:center;"><?php echo anchor('/#categories', 'Continue Shopping', array('class'=>'ui_button')); ?></p>
-		
-	
-	<div style="clear:both;"></div>
 	</div>
+<br class="cls"/>
+</div><!--End midsection-->

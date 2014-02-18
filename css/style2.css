@@ -59,31 +59,61 @@ ul, li{
 	margin:0;
 	list-style: none;
 }
-input[type=button], input[type=submit],  .uibutton{
+input[type=button], input[type=submit],.uibutton{
 	border-radius:.15em;
 	background: #56AF31;
 	border: 0;
-	color: #FFFFFF;
+	color: #FFFFFF!important;
 	cursor: pointer;
-	padding: 5px 8px;
+	padding:.8em 1em;
+	text-decoration:none!important;
+	text-align:center;
 }
 input[type=text], input[type=email], textarea{
 	border-radius:.15em;
 	border: 1px solid #CFCFCF;
 	color: #4F5155;
-	padding: 5px 3px;
+	padding:.8em 1em;
+	width:20em;
+}
+.btn-info{
+	background:#1883BA;
+}
+.btn-warning{
+	background:#D86D05;
+}
+.btn-danger{
+	background:#EF3D3F;
+}
+.btn-block{
+	display:block;float:left;
+	width:15em!important;
 }
 strong { font-weight:bold; }
 
-.status li, .st-success, .st-fail{
-	padding: 2px 3px;
-	margin-bottom: 1px;
+table tr th{
+	background:#DFDFDF;
+	font-weight:bold;
+	padding:.7em;
 }
-li.errors{
+
+.status li, .st-success, .st-fail{
+	padding:.15em .2em;
+	margin-bottom:.1em;
+}
+
+li.success,.success, li.errors,.error, .infomsg{
+	font-size:0.95em;
+	font-style:italic;
+}
+li.errors, .error{
 	color: red;
 }
-li.success{
-	background: #1883BA;
+li.success, .success{
+	color:green;
+}
+.infomsg{
+	color:#1883BA;
 }
 .cls{ clear:both; }
 
@@ -101,6 +131,11 @@ li.success{
 .infosmall{
     font-size:0.9em;
     font-weight:normal;
+}
+
+/*Form tables*/
+table.formtable tr td{
+	padding:.5em .8em;
 }
 
 /*Grids*/
@@ -210,8 +245,8 @@ ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 	border: 1px solid #AFAFAF;
 	border-left:0;border-right:0;
 	clear: both;
-	height: 400px;
-	padding: 5px;
+	min-height:20em;
+	padding:.4em;
 }
 #make_order_image{
 	float: left;
@@ -254,10 +289,7 @@ ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 .order_box_products{
 	border: 1px solid #AFAFAF;
 }
-.order_table{
-	background: #FFF;
-	width: 100%;
-}
+
 .table_header{
 	font-weight: bold;
 	text-decoration: underline;
@@ -347,13 +379,8 @@ ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 	border-bottom: 1px solid #AFAFAF;
 }
 #cart_table{
-	font-size: 15px;
-	width: 600px;
-}
-table tr#table_header{
-	background: #CCED7B;
-	font-weight: bold;
-	height: 10px;
+	font-size:1.2em;
+	width:100%;
 }
 #cart_table table tr{
 	background: #FFC;
@@ -361,7 +388,7 @@ table tr#table_header{
 
 /*Checks*/
 a#checkout_but{
-	padding: 4px 20px;
+	margin-top:1em;
 }
 .checkout_box{
 	border-top: 1px solid #AFAFAF;

@@ -7,6 +7,9 @@
 			//Use passed id
 			$prod = $array1;
 			echo "<h1>Order for ".$prod->name."</h1>";
+			//var_dump($prod);
+			
+			$this->load->view('utils/status');
 		?>
 		<div id="place_order_holder">
 			<div id="make_order_image">

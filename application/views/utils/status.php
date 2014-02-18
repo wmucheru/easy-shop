@@ -12,6 +12,7 @@
 			$this->session->unset_userdata('error_msg');
 	 	}
 	}
+	echo validation_errors('<li class="error">', '</li>');
 ?>
 <div class="cls"> </div>
 </div>
