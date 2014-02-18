@@ -1,7 +1,5 @@
 
 <div id="midsection">
-	<?php $this->load->view('utils/leftnav'); ?>
-
 	<div class="box-grid34" id="midbox">
 		<h1>Shopping Cart</h1>
 		<div id="cart_holder">
@@ -41,5 +39,7 @@
 			</div>
 		</div>
 	</div>
+	
+	<?php $this->load->view('utils/rightnav'); ?>
 <br class="cls"/>
 </div><!--End midsection-->

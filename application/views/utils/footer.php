@@ -8,6 +8,7 @@
 	?> <a href="<?php echo site_url('profile'); ?>">Honest Industries Ltd.</a>. All rights reserved.
 	</p>
 </div>
+<br class="cls"/>
 </div>
 </body>
 </html>

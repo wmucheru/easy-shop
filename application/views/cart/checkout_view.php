@@ -1,6 +1,4 @@
 <div id="midsection">
-	<?php $this->load->view('utils/leftnav'); ?>
-
 	<div class="box-grid34" id="midbox">
 		<h1>Checkout</h1>
 	
@@ -16,23 +14,26 @@
 				}
 				
 				if($this->cart->contents()){
-					echo "<table id='cart_table' cellspacing='5' cellpadding='3'>
-					<tr style='font-weight:bold;text-decoration:underline;'>
-					<td>Item</td>
-					<td>Qty</td>
-					<td>Sub(KES.)</td>
-					<td>o</td></tr>";
-					
+				?><br/>
+				<table class="formtable" id="cart_table">
+				<tr>
+					<th>Item</th>
+					<th>Qty</th>
+					<th>Sub(KES.)</th>
+					<th>Action</th>
+				</tr>
+				<?php
 					if($cart = $this->cart->contents()){
-						
 						foreach($cart as $item){
+				?>
+				<?php
 							echo "<tr>";
 							echo "<td>".$item['name']."</td>";
 							echo "<td>".$item['qty']."</td>";
 							echo "<td>KES. ".$item['subtotal']."</td>";
 							echo "<td class='remove'>";
 							echo anchor('cart/remove/'.$item['rowid'].
-							"/cart", 'X', array('title'=>'Click to remove'));
+							"/cart", 'remove', array('title'=>'Click to remove'));
 						}
 						echo "<tr style='background:#CCED7B;'>
 							<td></td>
@@ -45,7 +46,7 @@
 				else{
 					echo "<p align:center;'><h2>Your Cart is empty</h2>".
 					anchor('/', 'Continue Shopping', 
-					array('id'=>'checkout_but', 'class'=>'ui_button'))."</p>";
+					array('id'=>'checkout_but', 'class'=>'uibutton'))."</p>";
 				}
 			?>
 			<br class="cls"/>
@@ -53,12 +54,8 @@
 			
 			<div id="buyer_check" class="checkout_box">
 			<div class="checkout_header">Buyer Information</div>
-			<span class='error'>( * - required fields)</span>
+			<span class='infomsg'>( * - required fields)</span>
 			<?php
-				
-				//Give out any validation errors
-				echo validation_errors('<li class="error">', '</li>')."<br/>";
-			
 				//Buyer info
 				echo form_open('cart/processcart');
 				
@@ -98,7 +95,7 @@
 			<div class="checkout_header">Payment Options</div>
 				<ol>
 					<li><h3>M-Pesa</h3>
-						<p>Send to M-Pesa: <strong><?php echo $this->config->item('phone_1'); ?></u></strong> or call us on the same number</p>
+						<p>Send to M-Pesa: <strong><u><?php echo $this->config->item('phone1'); ?></u></strong> or call us on the same number</p>
 					</li>
 					<br/>
 					<span class="ps_note">
@@ -133,5 +130,7 @@
 			</div>
 		</div>
 	</div>
+	
+	<?php $this->load->view('utils/rightnav'); ?>
 <br class="cls"/>
 </div><!--End midsection-->

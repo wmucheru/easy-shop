@@ -1,8 +1,6 @@
 <div id="midsection">
-	<?php $this->load->view('utils/leftnav'); ?>
-
-	<div class="box-grid34" id="midbox">
-		<div class="box-grid2">
+	<div class="box-grid1" id="midbox">
+		<div class="box-grid3">
 			<h1>Contact Us</h1>
 			
 			<form action="" method="post" accept-charset="utf-8">
@@ -28,9 +26,23 @@
 						<input type="submit" name="cont_submit" value="Send Message">
 					</p>
 				</div>
-			</form>	</div>
+			</form>
+		</div>
 		
-		<div class="box-grid2 righter">
+		<div class="box-grid3 text-center" style="margin-top:8em;margin-left:2em;">
+			<h3>Contacts</h3>
+			In case you need details or want more information, contact us:
+			
+			<br/><br/>
+			<ul>
+				<li><strong><?php echo $this->config->item('phone1'); ?></strong></li>
+				<li><strong><a href="mailto:<?php echo $this->config->item('email1'); ?>">
+					<?php echo $this->config->item('email1'); ?></a></strong></li>
+			</ul>
+			<br/>
+		</div>
+		
+		<div class="box-grid3">
 			<h3>Location from Google Maps</h3>
 			<div id="map">
 				<iframe width="300" height="250" frameborder="0" scrolling="no" marginheight="0" 

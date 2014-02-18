@@ -6,8 +6,8 @@ $config['uri_protocol']	= 'AUTO';
 
 //CUSTOM CONFIGS
 $config['email1'] = 'honestproductions@gmail.com';
-$config['email2'] = '';
 $config['phone1'] = '+254 722 382 078';
+$config['email2'] = '';
 
 $config['url_suffix'] = '';
 $config['language']	= 'english';

@@ -13,6 +13,7 @@
 
 <link href="<?php echo base_url();?>css/reset.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo base_url();?>css/style2.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" href="<?php echo base_url();?>images/favicon.ico"/>
 
 <script type="text/javascript" src="<?php echo base_url();?>js/jquery.min.js"></script>
 
@@ -22,9 +23,8 @@
 <div id="header">
 	<p class="text-center" id="navbar_top">
 		<a href="<?php echo base_url();?>"><img id="hop_logo" src="<?php echo base_url();?>images/HOP_logo.png"/></a>
-		
-		<a href="<?php echo site_url('cart/'); ?>">Cart</a> |
-		<a href="<?php echo site_url('cart/checkout'); ?>">Checkout</a> 
 	</p>
+<br class="cls"/>
 </div>
+<?php $this->load->view('utils/topNav'); ?>
 

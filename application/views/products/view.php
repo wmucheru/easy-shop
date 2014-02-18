@@ -1,6 +1,4 @@
 <div id="midsection">
-	<?php $this->load->view('utils/leftnav'); ?>
-
 	<div class="box-grid34" id="midbox">
 		<a href="<?php echo site_url('products') ?>">&larr; Back to Products</a>
 		<?php
@@ -11,8 +9,8 @@
 			
 			$this->load->view('utils/status');
 		?>
-		<div id="place_order_holder">
-			<div id="make_order_image">
+		<div id="place_order_holder" class="box-grid1">
+			<div class="box-grid2" id="make_order_image">
 			<?php
 				echo img(
 					array(
@@ -24,7 +22,7 @@
 				
 			?>
 			</div>
-			<div id="make_order_details">
+			<div class="box-grid2" id="make_order_details">
 				<h3 style="margin-top:0;">Description:</h3>
 				<p><?php echo $prod->description; ?></p><br/>
 			<?php
@@ -35,7 +33,7 @@
 					If the category is special or for flowers, the customer should
 					contact us directly
 				*/
-				if($category_id == '13' || $category_id == '14'){
+				if($category_id == 'Special'){
 				
 					//Contact info
 					echo "<div style='border-top:1px solid #AFAFAF;font-size:14px;
@@ -69,7 +67,7 @@
 					echo form_input($text);
 					
 					echo " <span style='font-size:14px;font-weight:bold;margin-right:30px;'>".
-						$prod->unit."s</span>";
+						" units</span>";
 					
 					echo form_submit('place_order', 'Add to Cart');
 					echo form_close();
@@ -81,6 +79,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<?php $this->load->view('utils/rightnav'); ?>
 	
 <br class="cls"/>
 </div><!--End midsection-->

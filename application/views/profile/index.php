@@ -1,7 +1,5 @@
 <div id="midsection">
-	<?php $this->load->view('utils/leftnav'); ?>
-
-	<div class="box-grid34" id="midbox">
+	<div class="box-grid34" id="midbox" style="width:55%;">
 		<h1>Company Profile</h1>
 		<div class="container">
 			<p>Honest Industries Ltd is located in Majengo Kanamai within Kilifi County, some 22 
@@ -40,19 +38,20 @@
 				<li>To steadily grow Honest Industries Ltd  into a major industrial player in Kenyan economy</li>
 				<li>To diversify the offering of natural based organic products</li>
 			</ul>
-			<br/>
-			
-			<h3>HONEST Core Values</h3>
-			<ul>
-				<li><strong>H</strong> - Have an Open Mind in our business relationships </li>
-				<li><strong>O</strong> - Opportunity to do great things </li>
-				<li><strong>N</strong> - Networking with value adding partners </li>
-				<li><strong>E</strong> - Exceed customers’ expectations </li>
-				<li><strong>S</strong> - System approach in our operations </li>
-				<li><strong>T</strong> - Teamwork </li>
-			</ul>
 			</p>
 		</div>
+	</div>
+	
+	<div class="box-grid4 righter" style="margin-top:10em;width:35%;">
+		<h3>HONEST Core Values</h3>
+		<ul>
+			<li><strong>H</strong> - Have an Open Mind in our business relationships </li>
+			<li><strong>O</strong> - Opportunity to do great things </li>
+			<li><strong>N</strong> - Networking with value adding partners </li>
+			<li><strong>E</strong> - Exceed customers' expectations </li>
+			<li><strong>S</strong> - System approach in our operations </li>
+			<li><strong>T</strong> - Teamwork </li>
+		</ul>
 	</div>
 <br class="cls"/>
 </div><!--End midsection-->

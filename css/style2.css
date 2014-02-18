@@ -10,7 +10,8 @@
 }
 
 body{
-	background:url(../images/bg2.png) #D4EEFC;
+	background:url(../images/bg1.jpg);
+	/*background:#BED966;*/
 	color: #707070;
 	font: 12px Georgia, Helvetica, Arial, sans-serif;
 /*	font:13px museo300;*/
@@ -65,7 +66,7 @@ input[type=button], input[type=submit],.uibutton{
 	border: 0;
 	color: #FFFFFF!important;
 	cursor: pointer;
-	padding:.8em 1em;
+	padding:.6em .8em;
 	text-decoration:none!important;
 	text-align:center;
 }
@@ -73,7 +74,7 @@ input[type=text], input[type=email], textarea{
 	border-radius:.15em;
 	border: 1px solid #CFCFCF;
 	color: #4F5155;
-	padding:.8em 1em;
+	padding:.6em 8em;
 	width:20em;
 }
 .btn-info{
@@ -169,18 +170,15 @@ table.formtable tr td{
 	min-height:40em;
 	margin:0 auto;
 	color:#4D4747;
-}
+}l=
 
 #header{
-	/*background:#FFFFFF;
-	background:rgba(255, 255, 255, 0.9);*/
 	border-bottom:1px solid #00974A;
-/*	margin-bottom:1em;*/
-	padding:1em;
+	padding:.8em 1em .2em;
 }
 
 #hop_logo{
-	max-width:12em;
+	max-height:10em;
 }
 
 #midsection{
@@ -191,29 +189,65 @@ table.formtable tr td{
 	padding-bottom:3em;
 	text-align:justify;
 }
-#midsection .box-grid4{
-	width:20%;
-}
 
-#leftnav{
+#topnav{
 	background:#00974A;
-	border-right:1px solid #AFAFAF;
-	color:#FFFFFF;
-	min-height:40em;
-	padding-top:3em;
+	margin-bottom:.1em;
+}
+#topnav .links{
+	padding:.6em 1em 0;
+}
+#topnav .links a{
+	color:#FFF;
 }
 
-ul#navbar_side li a{
+ul#navbar li{
+	float:left;
+}
+ul#navbar li a{
 	color:#FFFFFF;
 	display:block;
 	font-size:13px;
 	padding:.5em 1em;
 	text-decoration:none;
 }
-ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
+ul#navbar li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 #prod-bd #prod-lnk, #cont-bd #cont-lnk{
 	background:#FFF;
 	color:#00974A;
+}
+
+/*Rightnav*/
+#rightnav{
+	margin-left:1em;
+	margin-top:4em;
+	height: auto!important;
+	padding:.5em;
+	width:27%;
+}
+.nav_holder{
+	border: 1px solid #AFAFAF;
+	margin-bottom:1em;
+}
+.box_header{
+	background:#CCED7B;
+	font-weight:bold;
+	padding:.4em .3em;
+}
+.nav_header_link{
+	float: right;
+	font-weight: normal;
+}
+.nav_containers{
+	margin-top:.5em;
+	overflow: auto;
+}
+#nav_shopping_cart{
+	min-height:20em;
+	overflow: auto;
+}
+#nav_shopping_cart table{
+	width: 100%;
 }
 
 #midbox{
@@ -227,9 +261,9 @@ ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 	border-bottom:1px solid #EFEFEF;
 	float:left;
 	margin-bottom:2em;
-	margin-right:1em;
+	margin-right:3em;
 	padding:1em .3em;
-	max-width:22em;
+	max-width:24em;
 	text-align:center;
 }
 .product_box img{
@@ -242,7 +276,6 @@ ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 
 /*CARTSTUFF-Orders*/
 #place_order_holder{
-	border-top: 1px solid #AFAFAF;
 	min-height:20em;
 	padding:.4em;
 }
@@ -254,7 +287,6 @@ ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 }
 #make_order_details{
 	background: #EEFCC2;
-	width: 400px;
 	padding: 10px;
 	float: left;
 	margin-left: 20px;
@@ -387,7 +419,7 @@ a#checkout_but{
 }
 .checkout_box{
 	border-top: 1px solid #AFAFAF;
-	margin: 10px 0px;
+	margin:.8em 0;
 }
 .checkout_header{
 	background: #CCED7B;
@@ -396,7 +428,8 @@ a#checkout_but{
 	padding: 4px;
 }
 #product_check,#buyer_check,#payment_check{
-	min-height: 200px;
+	margin-bottom:5em;
+	min-height:5em;
 	height: auto!important;
 }
 #buyer_check{
@@ -473,4 +506,10 @@ a#checkout_but{
 	font-size: 15px;
 	text-align: left;
 }
- */
+
+#footer{
+	background:#FFFFFF;
+	border-radius:0 0 1em 1em;
+	box-shadow:0px 3px 10px #222;
+	padding:1em;
+}

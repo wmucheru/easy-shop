@@ -1,6 +1,4 @@
 <div id="midsection">
-	<?php $this->load->view('utils/leftnav'); ?>
-
 	<div class="box-grid34" id="midbox">
 		<!-- <h1>Our Products</h1> -->
 		<?php 
@@ -18,8 +16,13 @@
 			foreach($categories as $ct){
 				$cat_id = $ct->id;
 				$cat_name = $ct->name;
+		?>
+		
+		<?php
 				
-				echo '<h2>'.$cat_name.'</h2>';
+				echo '<div class="box-grid1">
+					<h2>'.$cat_name.'</h2>
+					</div>';
 				
 				//Get the products under each
 				$products = $this->products_model->getCategoryItems($cat_id);
@@ -70,5 +73,7 @@
 			}//End category foreach
 		?>
 	</div>
+	
+	<?php $this->load->view('utils/rightnav'); ?>
 <br class="cls"/>
 </div><!--End midsection-->

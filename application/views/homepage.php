@@ -1,9 +1,7 @@
 <div id="midsection">
-	<?php $this->load->view('utils/leftnav'); ?>
-
-	<div class="box-grid34" id="midbox">
+	<div class="box-grid34" id="midbox" style="width:55%;">
 		<h1>Home</h1>
-		<div class="container">
+		<div class="box-grid1">
 			<p>Honest Industries Ltd is located in Majengo Kanamai within Kilifi County, some 22 
 			kilometers from Mombasa City. It is a limited company with a principal investor who 
 			is a majority shareholder and two more directors. One of the directors oversees the 
@@ -20,6 +18,14 @@
 			Processing Council (EPC). Honest Industries has there three categories of market segments - supermarkets, 
 			beauty/cosmetic shops and chemists mostly is Mombasa, Nairobi and Mt Kenya region.</p>
 		</div>
+	</div>
+	
+	<div class="box-grid4 righter" style="padding:5em 3em 0 0;width:35%;">
+		<img src="<?php echo base_url('images/intro.jpg'); ?>" alt="Herbal Open Products"/>
+		<p class="italics text-center"><br/>
+			<b>Provision of quality soap products from natural and organic plants with high 
+			herbal and medicinal value.</b>
+		</p>	
 	</div>
 <br class="cls"/>
 </div><!--End midsection-->
