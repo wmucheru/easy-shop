@@ -165,7 +165,7 @@ table.formtable tr td{
 .text-right{ text-align:right; }
 
 #wrapper{
-	max-width:900px;
+	max-width:960px;
 	min-height:40em;
 	margin:0 auto;
 	color:#4D4747;
@@ -242,9 +242,7 @@ ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 
 /*CARTSTUFF-Orders*/
 #place_order_holder{
-	border: 1px solid #AFAFAF;
-	border-left:0;border-right:0;
-	clear: both;
+	border-top: 1px solid #AFAFAF;
 	min-height:20em;
 	padding:.4em;
 }
@@ -253,9 +251,6 @@ ul#navbar_side li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 	/*height: 230px;
 	width: 220px;*/
 	overflow: hidden;
-}
-.make_order_image{
-	/*width: 270px;*/
 }
 #make_order_details{
 	background: #EEFCC2;

@@ -68,6 +68,7 @@ class Cart extends CI_Controller{
 		
 		//If the validation is successful and errrors are found
 		if($this->form_validation->run() == FALSE || $prod_amt == ''){
+			$this->session->set_userdata('success_msg', $product->name.' added to shopping cart.');
 			redirect('products/view/'.$prod_id);
 		}
 		else{
@@ -86,7 +87,7 @@ class Cart extends CI_Controller{
 			
 			$cart_items = $this->cart->contents();
 			$this->cart->insert($insert);
-			$this->session->set_flashdata('result', $product->name.' added to shopping cart.');
+			$this->session->set_flashdata('success_msg', $product->name.' added to shopping cart.');
 			
 			redirect('products');
 		}

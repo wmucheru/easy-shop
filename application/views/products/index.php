@@ -2,54 +2,73 @@
 	<?php $this->load->view('utils/leftnav'); ?>
 
 	<div class="box-grid34" id="midbox">
-		<h1>Our Products</h1>
+		<!-- <h1>Our Products</h1> -->
+		<?php 
+			$this->load->view('utils/status');
+			
+			/* GENERATE THIS DYNAMICALLY */
+			// foreach($products as $pr){
+				
+			// }
 		
-		<?php $this->load->view('utils/status'); ?>
-		
-		<div class="product_box">
-			<a class="prod" href="<?php echo site_url('products/view/1')?>">
-				<img src="<?php echo base_url();?>images/products/aloe-care-soap.png" alt="Aloe Care Soap"/>
-			</a>
-			<p class="pricebox"><a class="prod" href="<?php echo site_url('products/view/1')?>">Aloe Care Soap</a>
-				<br/>Ksh. xyz - <a href="<?php echo site_url('products/view/1')?>">Add to Cart</a>
-			</p>
-		</div>
-		
-		<div class="product_box">
-			<a class="prod" href="<?php echo site_url('')?>">
-				<img src="<?php echo base_url();?>images/products/aloe-vera-soap.png" alt="Aloe Vera Soap"/>
-			</a>
-			<p class="pricebox"><a class="prod" href="<?php echo site_url('')?>">Aloe Vera Soap</a>
-				<br/>Ksh. xyz - <a href="<?php echo site_url('')?>">Add to Cart</a>
-			</p>
-		</div>
-		
-		<div class="product_box">
-			<a class="prod" href="<?php echo site_url('')?>">
-				<img src="<?php echo base_url();?>images/products/neem-original-soap.png" alt="Neem Original Soap"/>
-			</a>
-			<p class="pricebox"><a class="prod" href="<?php echo site_url('')?>">Neem Original Soap</a>
-				<br/>Ksh. xyz - <a href="<?php echo site_url('')?>">Add to Cart</a>
-			</p>
-		</div>
-		
-		<div class="product_box">
-			<a class="prod" href="<?php echo site_url('')?>">
-				<img src="<?php echo base_url();?>images/products/neem-perfumed-soap.png" alt="Neem Perfumed Soap"/>
-			</a>
-			<p class="pricebox"><a class="prod" href="<?php echo site_url('')?>">Neem Perfumed Soap</a>
-				<br/>Ksh. xyz - <a href="<?php echo site_url('')?>">Add to Cart</a>
-			</p>
-		</div>
-		
-		<div class="product_box">
-			<a class="prod" href="<?php echo site_url('')?>">
-				<img src="<?php echo base_url();?>images/products/rose-coconut-soap.png" alt="Rose Coconut Soap"/>
-			</a>
-			<p class="pricebox"><a class="prod" href="<?php echo site_url('')?>">Rose Coconut Soap</a>
-				<br/>Ksh. xyz - <a href="<?php echo site_url('')?>">Add to Cart</a>
-			</p>
-		</div>
+			$categories = $this->products_model->getAllCategories();
+			//var_dump($categories);
+			
+			//Foreach category generate its products
+			foreach($categories as $ct){
+				$cat_id = $ct->id;
+				$cat_name = $ct->name;
+				
+				echo '<h2>'.$cat_name.'</h2>';
+				
+				//Get the products under each
+				$products = $this->products_model->getCategoryItems($cat_id);
+				//var_dump($products);
+				
+				foreach($products as $pd){
+					$p_id = $pd->id;
+					$cat_id = $pd->category_id;
+					$p_name = $pd->name;
+					$p_unit = $pd->unit;
+					$p_qty = $pd->quantity;
+					$p_price = $pd->price;
+					$p_desc = $pd->description;
+					$p_img = $pd->image;
+					/*
+					 *    public 'id' => string '4' (length=1)
+					      public 'category_id' => string '2' (length=1)
+					      public 'name' => string 'Neem Perfumed Soap' (length=18)
+					      public 'unit' => string 'Box' (length=3)
+					      public 'quantity' => string '20' (length=2)
+					      public 'price' => string '2300.00' (length=7)
+					      public 'description' => string 'Neem Perfumed Soap' (length=18)
+					      public 'image' => string 'neem-perfumed-soap.png' (length=22)
+					      public 'option_name' => null
+					      public 'option_values' => null
+					 * 
+					 * */
+			?>
+			
+			<div class="product_box">
+				<a class="prod" href="<?php echo site_url('products/view/'.$p_id)?>">
+					<img src="<?php echo base_url('images/products/'.$p_img); ?>" alt="<?php echo $p_name; ?>"/>
+				</a>
+				<p class="pricebox">
+					<a class="prod" href="<?php echo site_url('products/view/1')?>"><?php echo $p_name; ?></a>
+					<br/>Ksh. <?php echo $p_price; ?> - 
+					<a href="<?php echo site_url('products/view/'.$p_id)?>">Add to Cart</a>
+				</p>
+				<p style='text-align:center;font-size:1.1em;margin-top:2px;'>
+					<?php
+						echo $p_name." (".$p_qty."kg ".$p_unit.")";
+					?>
+				</p>
+			</div>
+			
+			<?php	
+				}//End product foreach
+			}//End category foreach
+		?>
 	</div>
 <br class="cls"/>
 </div><!--End midsection-->

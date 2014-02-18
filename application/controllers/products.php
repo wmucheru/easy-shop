@@ -16,6 +16,10 @@ class Products extends CI_Controller {
 		);
 	}
 	
+	function categories(){
+		
+	}
+	
 	function view($product_id){
 		$prod = $this->products_model->getProductDetail($product_id);
 		
