@@ -258,17 +258,25 @@ ul#navbar li a:hover, #home-bd #home-lnk, #prof-bd #prof-lnk,
 
 /*Products*/
 .product_box{
-	border-bottom:1px solid #EFEFEF;
+	background:#FFC;
+	box-shadow:0 3px 10px #222;
+	border:1px solid #EFEFEF;
 	float:left;
 	margin-bottom:2em;
-	margin-right:3em;
-	padding:1em .3em;
+	margin-right:2em;
+	padding:1em;
 	max-width:24em;
 	text-align:center;
+}
+.product_box:hover{
+	border:1px solid #56AF31;
 }
 .product_box img{
 	height:14em;
 	width:auto;
+}
+.pricebox{
+	padding-top:.7em;
 }
 .product_box a{
 	font-size:1.1em;

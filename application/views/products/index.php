@@ -58,13 +58,8 @@
 				</a>
 				<p class="pricebox">
 					<a class="prod" href="<?php echo site_url('products/view/1')?>"><?php echo $p_name; ?></a>
-					<br/>Ksh. <?php echo $p_price; ?> - 
+					<br/>Ksh. <?php echo $p_price .' - '."(".$p_qty."kg ".$p_unit.")"; ?><br/> 
 					<a href="<?php echo site_url('products/view/'.$p_id)?>">Add to Cart</a>
-				</p>
-				<p style='text-align:center;font-size:1.1em;margin-top:2px;'>
-					<?php
-						echo $p_name." (".$p_qty."kg ".$p_unit.")";
-					?>
 				</p>
 			</div>
 			

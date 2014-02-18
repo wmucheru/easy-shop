@@ -5,7 +5,7 @@
 	<?php 
 		$year = date('Y');
 		if($year == '2014'){ echo $year; } else{ echo '2014 - '.$year; }
-	?> <a href="<?php echo site_url('profile'); ?>">Honest Industries Ltd.</a>. All rights reserved.
+	?> <a href="<?php echo site_url('profile'); ?>">Honest Industries Ltd</a>. All rights reserved.
 	</p>
 </div>
 <br class="cls"/>

@@ -1,6 +1,6 @@
 <div id="midsection">
 	<div class="box-grid34" id="midbox" style="width:55%;">
-		<h1>Home</h1>
+		<h1>Welcome to Honest Industries Ltd.</h1>
 		<div class="box-grid1">
 			<p>Honest Industries Ltd is located in Majengo Kanamai within Kilifi County, some 22 
 			kilometers from Mombasa City. It is a limited company with a principal investor who 
@@ -25,6 +25,9 @@
 		<p class="italics text-center"><br/>
 			<b>Provision of quality soap products from natural and organic plants with high 
 			herbal and medicinal value.</b>
+			
+			<br/><br/>
+			<a class="uibutton" href="<?php echo site_url('products'); ?>">Browse our range of Products &rarr;</a>
 		</p>	
 	</div>
 <br class="cls"/>
